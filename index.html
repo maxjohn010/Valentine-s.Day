@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image" href="icon.png">
+  <link rel="preload" as="image" href="icon.png">
+  <meta property="og:image" content="icon.png">
+<meta property="og:title" content="My Website">
+<meta property="og:description" content="This is my awesome site.">
+
+  <title>GIFT FOR YOU JANA G 💝</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body >
+  <div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="content">
+</div>
+  <div class="container">
+    <h1>WILL YOU BE MY VALENTINS? </h1>
+    <div class="buttons">
+      <!-- <button class="yes-button" onclick="handleYesClick()">Yes</button> -->
+       <!-- From Uiverse.io by njesenberger --> 
+<button type="button" class="yes-button" onclick="handleYesClick()">
+  <div class="button-top">YES</div>
+  <div class="button-bottom"></div>
+  <div class="button-base"></div>
+</button>
+      <!-- <button class="no-button" onclick="handleNoClick()">No</button> -->
+       <button type="no-button" class="no-button" onclick="handleNoClick()">
+  <div class="no-button-top">NO</div>
+  <div class="no-button-bottom"></div>
+  <div class="no-button-base"></div>
+</button>
+    </div>
+    <div class="gif_container">
+      <img src="https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExbW5lenZyZHI5OXM2eW95b3pmMG40cWVrMDhtNjVuM3A4dGNxa2g2dSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/VM1fcpu2bKs1e2Kdbj/giphy.gif" alt="Cute GIF">
+    </div>
+  </div>
+
+  
+  
+  
+  <script>
+
+const messages = [
+    "Are you sure?",
+    "Really sure??🤨",
+    "Are you positive?🧐",
+    "Jana g please...🤗",
+    "Just think about it!☹️",
+    "If you say no, I will be really sad...😮",
+    "I will be very sad...🥺",
+    "I will be very very very sad...😭",
+    "Ok fine, I will stop asking...🙂",
+    "Just kidding, say yes please!💝"
+];
+
+let messageIndex = 0;
+
+function handleNoClick() {
+  const noButton = document.querySelector('.no-button');
+  const yesButton = document.querySelector('.yes-button');
+  noButton.textContent = messages[messageIndex];
+  messageIndex = (messageIndex + 1) % messages.length;
+  const currentSize = parseFloat(window.getComputedStyle(yesButton).fontSize);
+  yesButton.style.fontSize = `${currentSize * 1.5}px`;
+}
+
+function handleYesClick() {
+  window.location.href = "yes_page.html";
+}
+
+onload = () => {
+  document.body.classList.remove("container");
+};
+
+const wrapper = document.querySelector(".wrapper");
+const openBtn = document.getElementById("openBtn");
+const closeBtn = document.getElementById("closeBtn");
+
+openBtn.addEventListener("click", () => {
+  wrapper.classList.add("open");
+  openBtn.style.display = "none";
+  closeBtn.style.display = "inline-block";
+});
+
+closeBtn.addEventListener("click", () => {
+  wrapper.classList.remove("open");
+  closeBtn.style.display = "none";
+  openBtn.style.display = "inline-block";
+});
+
+  </script>
+</body>
+
+</html>
